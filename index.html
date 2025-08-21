@@ -1,0 +1,431 @@
+!<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Guardian AI - Intelligent Risk Assessment</title>
+    <meta name="description" content="Advanced AI-powered stroke risk assessment tool. Get personalized insights based on medical and lifestyle factors with professional healthcare analysis.">
+    <meta name="author" content="Stroke Guardian AI">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Stroke Guardian AI - Intelligent Risk Assessment">
+    <meta property="og:description" content="Advanced AI-powered stroke risk assessment tool. Get personalized insights based on medical and lifestyle factors with professional healthcare analysis.">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="/static/css/stroke.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content animate-fade-in">
+                    <div class="brand-header">
+                        <i data-lucide="heart-pulse" class="brand-icon"></i>
+                        <span class="brand-text">Stroke Guardian AI</span>
+                    </div>
+                    
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Intelligent Stroke 
+                            <span class="gradient-text">Risk Assessment</span>
+                        </h1>
+                        <p class="hero-description">
+                            Advanced AI-powered analysis to evaluate your stroke risk based on medical and lifestyle factors. 
+                            Get personalized insights in minutes.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-badges">
+                        <div class="feature-badge">
+                            <i data-lucide="shield" class="feature-icon low-risk"></i>
+                            <span>HIPAA Compliant</span>
+                        </div>
+                        <div class="feature-badge">
+                            <i data-lucide="activity" class="feature-icon primary"></i>
+                            <span>Real-time Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image animate-slide-up">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=450&fit=crop&auto=format" 
+                         alt="Medical AI Analysis Dashboard"
+                         class="hero-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Assessment Section -->
+    <main class="main-section">
+        <div class="container">
+            <div class="assessment-grid">
+                <!-- Assessment Form -->
+                <div class="card medical-card animate-fade-in">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i data-lucide="heart-pulse" class="title-icon primary"></i>
+                            Risk Assessment
+                        </h2>
+                        <p class="card-description">
+                            Please provide accurate information for the most reliable assessment
+                        </p>
+                    </div>
+                    
+                    <div class="card-content">
+                        <form id="stroke-form" class="assessment-form">
+                            <!-- Personal Information Section -->
+                            <div class="form-section">
+                                <div class="section-header">
+                                    <i data-lucide="user" class="section-icon primary"></i>
+                                    <h3 class="section-title">Personal Information</h3>
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="age" class="form-label">Age (years)</label>
+                                        <input type="number" id="age" name="age" min="1" max="120" 
+                                               class="form-input" placeholder="Enter your age" required>
+                                        <div class="error-message" id="age-error"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="gender" class="form-label">Gender</label>
+                                        <select id="gender" name="gender" class="form-select" required>
+                                            <option value="">Select gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ever_married" class="form-label">Marital Status</label>
+                                        <select id="ever_married" name="ever_married" class="form-select" required>
+                                            <option value="">Select status</option>
+                                            <option value="Yes">Married</option>
+                                            <option value="No">Never Married</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="Residence_type" class="form-label">
+                                            <i data-lucide="home" class="label-icon"></i>
+                                            Residence Type
+                                        </label>
+                                        <select id="Residence_type" name="Residence_type" class="form-select" required>
+                                            <option value="">Select residence</option>
+                                            <option value="Urban">Urban</option>
+                                            <option value="Rural">Rural</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Medical History Section -->
+                            <div class="form-section">
+                                <div class="section-header">
+                                    <i data-lucide="heart" class="section-icon primary"></i>
+                                    <h3 class="section-title">Medical History</h3>
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="hypertension" class="form-label">Hypertension (High Blood Pressure)</label>
+                                        <select id="hypertension" name="hypertension" class="form-select" required>
+                                            <option value="">Select option</option>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="heart_disease" class="form-label">Heart Disease</label>
+                                        <select id="heart_disease" name="heart_disease" class="form-select" required>
+                                            <option value="">Select option</option>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lifestyle & Work Section -->
+                            <div class="form-section">
+                                <div class="section-header">
+                                    <i data-lucide="briefcase" class="section-icon primary"></i>
+                                    <h3 class="section-title">Lifestyle & Work</h3>
+                                </div>
+                                
+                                <div class="form-grid-single">
+                                    <div class="form-group">
+                                        <label for="work_type" class="form-label">Work Type</label>
+                                        <select id="work_type" name="work_type" class="form-select" required>
+                                            <option value="">Select work type</option>
+                                            <option value="Private">Private Sector</option>
+                                            <option value="Self-employed">Self-employed</option>
+                                            <option value="Govt_job">Government Job</option>
+                                            <option value="children">Children (Student)</option>
+                                            <option value="Never_worked">Never Worked</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="smoking_status" class="form-label">
+                                            <i data-lucide="cigarette" class="label-icon"></i>
+                                            Smoking Status
+                                        </label>
+                                        <select id="smoking_status" name="smoking_status" class="form-select" required>
+                                            <option value="">Select smoking status</option>
+                                            <option value="never smoked">Never Smoked</option>
+                                            <option value="formerly smoked">Formerly Smoked</option>
+                                            <option value="smokes">Currently Smokes</option>
+                                            <option value="Unknown">Unknown</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Health Metrics Section -->
+                            <div class="form-section">
+                                <div class="section-header">
+                                    <i data-lucide="droplets" class="section-icon primary"></i>
+                                    <h3 class="section-title">Health Metrics</h3>
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="avg_glucose_level" class="form-label">Average Glucose Level (mg/dL)</label>
+                                        <input type="number" id="avg_glucose_level" name="avg_glucose_level" 
+                                               min="50" max="500" step="0.1" class="form-input" 
+                                               placeholder="e.g., 120.5" required>
+                                        <div class="form-hint">Normal range: 70-100 mg/dL (fasting)</div>
+                                        <div class="error-message" id="glucose-error"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="bmi" class="form-label">
+                                            <i data-lucide="scale" class="label-icon"></i>
+                                            Body Mass Index (BMI)
+                                        </label>
+                                        <input type="number" id="bmi" name="bmi" min="10" max="60" step="0.1" 
+                                               class="form-input" placeholder="e.g., 24.5" required>
+                                        <div class="form-hint">Normal range: 18.5-24.9</div>
+                                        <div class="error-message" id="bmi-error"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-submit">
+                                <button type="submit" class="submit-btn" id="submit-btn">
+                                    <i data-lucide="heart" class="btn-icon"></i>
+                                    <span class="btn-text">Calculate Stroke Risk</span>
+                                    <div class="loading-spinner" id="loading-spinner">
+                                        <i data-lucide="loader-2" class="spin"></i>
+                                        Analyzing Risk Factors...
+                                    </div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Results Display -->
+                <div class="card medical-card animate-fade-in">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i data-lucide="activity" class="title-icon accent"></i>
+                            Assessment Results
+                        </h2>
+                        <p class="card-description">
+                            Your personalized stroke risk analysis
+                        </p>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div id="results-container" class="results-container">
+                            <!-- Default State -->
+                            <div id="default-state" class="default-state">
+                                <div class="default-icon">
+                                    <i data-lucide="alert-triangle" class="pulse-soft"></i>
+                                </div>
+                                <div class="default-content">
+                                    <h3 class="default-title">Ready for Assessment</h3>
+                                    <p class="default-description">
+                                        Complete the form to receive your personalized stroke risk analysis
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Results Display (Hidden Initially) -->
+                            <div id="results-display" class="results-display hidden">
+                                <!-- Main Risk Display -->
+                                <div class="risk-card">
+                                    <div class="risk-header">
+                                        <div id="risk-icon" class="risk-icon pulse-soft"></div>
+                                        <div id="risk-badge" class="risk-badge"></div>
+                                    </div>
+
+                                    <div class="risk-score">
+                                        <div class="score-display">
+                                            <i data-lucide="percent" class="score-icon"></i>
+                                            <span id="probability-score" class="score-value">0.0%</span>
+                                        </div>
+                                        
+                                        <div class="progress-container">
+                                            <div class="progress-bar">
+                                                <div id="progress-fill" class="progress-fill"></div>
+                                            </div>
+                                            <div class="progress-labels">
+                                                <span>0%</span>
+                                                <span class="progress-label">Risk Probability</span>
+                                                <span>100%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="risk-ranges">
+                                        <div class="range-item low">
+                                            <span class="range-label">Low</span>
+                                            <span class="range-value">&lt; 33%</span>
+                                        </div>
+                                        <div class="range-item moderate">
+                                            <span class="range-label">Moderate</span>
+                                            <span class="range-value">33-66%</span>
+                                        </div>
+                                        <div class="range-item high">
+                                            <span class="range-label">High</span>
+                                            <span class="range-value">≥ 66%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Risk Explanation -->
+                                <div class="explanation-card">
+                                    <div class="explanation-item">
+                                        <i data-lucide="trending-up" class="explanation-icon primary"></i>
+                                        <div>
+                                            <h4 class="explanation-title">Risk Assessment</h4>
+                                            <p id="risk-message" class="explanation-text"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="explanation-item">
+                                        <i data-lucide="check-circle" class="explanation-icon accent"></i>
+                                        <div>
+                                            <h4 class="explanation-title">Recommendation</h4>
+                                            <p id="risk-recommendation" class="explanation-text"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Assessment Details -->
+                                <div class="details-card">
+                                    <div class="details-header">
+                                        <i data-lucide="calendar" class="details-icon"></i>
+                                        <span class="details-label">Assessment Details</span>
+                                    </div>
+                                    
+                                    <div class="details-grid">
+                                        <div class="detail-item">
+                                            <span class="detail-label">Date:</span>
+                                            <span id="assessment-date" class="detail-value"></span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Time:</span>
+                                            <span id="assessment-time" class="detail-value"></span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Precision:</span>
+                                            <span id="assessment-precision" class="detail-value"></span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Model:</span>
+                                            <span class="detail-value">AI-ML v2.1</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="action-buttons">
+                                    <button type="button" class="action-btn secondary" id="new-assessment-btn">
+                                        New Assessment
+                                    </button>
+                                    <button type="button" class="action-btn primary" id="consult-btn">
+                                        Consult Doctor
+                                    </button>
+                                </div>
+
+                                <!-- Important Notice -->
+                                <div class="notice-card">
+                                    <div class="notice-content">
+                                        <i data-lucide="alert-triangle" class="notice-icon"></i>
+                                        <div>
+                                            <h5 class="notice-title">Important Notice</h5>
+                                            <p class="notice-text">
+                                                This assessment is based on statistical models and should not replace professional medical evaluation. 
+                                                Risk factors can change, and individual circumstances vary. Always consult healthcare professionals 
+                                                for personalized medical advice.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medical Disclaimer -->
+            <div class="disclaimer">
+                <div class="disclaimer-content">
+                    <h4 class="disclaimer-title">
+                        <i data-lucide="shield" class="disclaimer-icon"></i>
+                        Medical Disclaimer
+                    </h4>
+                    <p class="disclaimer-text">
+                        This tool provides educational risk assessment based on the Kaggle Stroke Prediction Dataset. 
+                        Results are not a substitute for professional medical advice, diagnosis, or treatment. 
+                        Always consult qualified healthcare providers for medical decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-content">
+            <i id="toast-icon" class="toast-icon"></i>
+            <div class="toast-text">
+                <div id="toast-title" class="toast-title"></div>
+                <div id="toast-description" class="toast-description"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/js/stroke.js"></script>
+    <script>
+        // Initialize Lucide icons after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
